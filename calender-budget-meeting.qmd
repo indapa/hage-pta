@@ -1,0 +1,28 @@
+---
+title: "Hage PTA Calendar & Budget meeting "
+from: markdown+emoji
+format:
+  html:
+    code-fold: false
+pdf:
+    code-fold: false
+
+execute:
+    echo: false
+jupyter: python3
+---
+
+## Agenda
+
+1. Meet with Scholastic Rep (James Lee)
+    - discuss family enagement strategies
+    - discuss [PTA family enagement survey results](https://indapa.github.io/hage-pta/survey.html)
+
+2. Master Calendar Planning (Amit Indap)
+    - Walk through [draft master calendar document](https://indapa.github.io/hage-pta/master_calendar.html)
+
+3. Budget Planning (Amit Indap)
+    - Review 
+        - Balance sheet
+        - Financial Report
+    
