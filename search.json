@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "PTAEz.html",
+    "href": "PTAEz.html",
+    "title": "PTAEz Deposits",
+    "section": "",
+    "text": "FY 2024-25\n\nimport pandas as pd\nfrom pathlib import Path\n\ndata_path=Path(\"/Users/indapa/hage-pta/PTAEz/Deposits/FY2024-25\")\n\ndeposits_file= data_path / \"deposits.csv\"\n\ndeposits_df= pd.read_csv(deposits_file)\n\ndeposits_df.head()\n\n\n\n\n\n\n\n\ndate\nmemo\nchecks\ncash\ntotal\ncategory\n\n\n\n\n0\n8/22/2024\nSquare Deposit\n0.0\n19.12\n19.12\nSquare\n\n\n1\n8/23/2024\nSquare Deposit\n0.0\n86.49\n86.49\nSquare\n\n\n2\n8/26/2024\nTotem Membership\n0.0\n933.15\n933.15\nMembership\n\n\n3\n8/26/2024\nSquare Deposit\n0.0\n90.67\n90.67\nSquare\n\n\n4\n8/26/2024\nSquare Deposit\n0.0\n52.80\n52.80\nSquare\n\n\n\n\n\n\n\n\n#group by memo and sum total\n\ngrouped_deposits = deposits_df.groupby('category').agg({'total': 'sum'}).reset_index()\n\n# Sort the grouped deposits by total in descending order\nsorted_deposits = grouped_deposits.sort_values(by='total', ascending=False).reset_index(drop=True)\n\nsorted_deposits\n\n\n\n\n\n\n\n\ncategory\ntotal\n\n\n\n\n0\nBook Fair\n14144.64\n\n\n1\nHage Fall Festival\n7879.19\n\n\n2\nGrants\n7666.52\n\n\n3\nSquare\n7152.58\n\n\n4\n5th Grade Promotion\n5030.00\n\n\n5\nApex Fun Run\n4774.50\n\n\n6\nBoo Grams\n2014.00\n\n\n7\nRestaurant Fundraiser\n1439.54\n\n\n8\nSpirit Wear\n1297.00\n\n\n9\nMembership\n1085.15\n\n\n10\nFamily Nights\n1063.00\n\n\n11\nPopsicle Sales\n900.00\n\n\n12\nArt to Remember\n787.57\n\n\n13\nFundraisers\n581.05\n\n\n14\nSwap Meet\n270.00\n\n\n15\nBiz Town\n127.00\n\n\n16\nHoliday Shop\n56.00\n\n\n\n\n\n\n\n\ndeposits_df.query(\"category == 'Square'\")\n\n\n\n\n\n\n\n\ndate\nmemo\nchecks\ncash\ntotal\ncategory\n\n\n\n\n0\n8/22/2024\nSquare Deposit\n0.0\n19.12\n19.12\nSquare\n\n\n1\n8/23/2024\nSquare Deposit\n0.0\n86.49\n86.49\nSquare\n\n\n3\n8/26/2024\nSquare Deposit\n0.0\n90.67\n90.67\nSquare\n\n\n4\n8/26/2024\nSquare Deposit\n0.0\n52.80\n52.80\nSquare\n\n\n5\n8/26/2024\nSquare Deposit\n0.0\n19.12\n19.12\nSquare\n\n\n6\n8/27/2024\nSquare Deposit\n0.0\n87.46\n87.46\nSquare\n\n\n7\n8/27/2024\nSquare Deposit\n0.0\n95.22\n95.22\nSquare\n\n\n8\n8/29/2024\nSquare Deposit\n0.0\n19.12\n19.12\nSquare\n\n\n9\n8/30/2024\nSquare Deposit\n0.0\n52.50\n52.50\nSquare\n\n\n10\n9/2/2024\nSquare Deposit\n0.0\n38.54\n38.54\nSquare\n\n\n25\n11/22/2024\nSquare Transfer\n0.0\n6591.54\n6591.54\nSquare\n\n\n\n\n\n\n\n\ndeposits_df.query(\"category == 'Grants'\").sort_values(by='total', ascending=False)\n\n\n\n\n\n\n\n\n\n\ndate\nmemo\nchecks\ncash\ntotal\ncategory\n\n\n\n\n39\n02/21/2025\nLeighton Foundation\n7500.0\n0.00\n7500.00\nGrants\n\n\n51\n04/30/2025\nStartbucks Donation\n0.0\n166.52\n166.52\nGrants"
+  },
+  {
     "objectID": "survey.html",
     "href": "survey.html",
     "title": "Hage PTA Family Survey Spring 2025 Results",
@@ -61,5 +68,117 @@
     "title": "Hage PTA Family Survey Spring 2025 Results",
     "section": "Conclusions",
     "text": "Conclusions\nThere is definitely enthusiasm for Fall Festival, STEM nights, and Holiday gift shop. There are some good ideas for new events left by responders that we should consider. Timing of PTA events seems like a big barrier to participation and we can try and think creativly about how accommdate different schedules. Having more sensory friendly events can help engage SpED famlies in PTA events. Finally, based on the data, there is more enthusiasm for electronic means of communication (Class Dojo, email, text) for PTA events.\nThere were 30 survey responses, with two-thirds from Kinder and UTK families. While this may skew results toward lower grade perspectives, addressing their suggestions could foster stronger long-term engagement with the PTA."
+  },
+  {
+    "objectID": "master_calendar.html",
+    "href": "master_calendar.html",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "",
+    "text": "Master calendar of events for 2025-26 school year.\nDistrict calendar for 2025-26"
+  },
+  {
+    "objectID": "master_calendar.html#master-calendar-of-events",
+    "href": "master_calendar.html#master-calendar-of-events",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "",
+    "text": "Master calendar of events for 2025-26 school year.\nDistrict calendar for 2025-26"
+  },
+  {
+    "objectID": "master_calendar.html#july-2025",
+    "href": "master_calendar.html#july-2025",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "July 2025",
+    "text": "July 2025\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n26\n27\n28\n29\n30\n31\n1\n\n\n2\n3\n4\n5\n6\n7\n8\n\n\n9\n10\n11\n12\n13\n14\n15\n\n\n16\n17\n18\n19\n20\n21\n22\n\n\n23\n24\n25\n26\n27\n28\n29\n\n\n30\n1\n2\n3\n4\n5\n6\n\n\n\n\nFiscal year starts July 1st\nBank transfer from BofA to Mission Credit Union\n\n\nAugust 2025 🌞\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n28\n29\n30\n31\n1\n2\n3\n\n\n4\n5\n6\n7\n8\n9\n10\n\n\n11\n12\n13\n14\n15\n16\n17\n\n\n18\n19\n20\n21\n22\n23\n24\n\n\n25\n26\n27\n28\n29\n30\n31\n\n\n\n\nWed Aug 6: PTA executive board 🧐\nThurs Aug 7: Welcome back lunch for faculty & staff 👋\nFriday Aug 8: New student orientation & PTA tables 🚀\nMonday Aug 11: First day of school 🏫\n\nTBD: School open house\nTBD: Start restaurant fundraisers"
+  },
+  {
+    "objectID": "master_calendar.html#september-2025",
+    "href": "master_calendar.html#september-2025",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "September 2025 🏈",
+    "text": "September 2025 🏈\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n1\n2\n3\n4\n5\n6\n7\n\n\n8\n9\n10\n11\n12\n13\n14\n\n\n15\n16\n17\n18\n19\n20\n21\n\n\n22\n23\n24\n25\n26\n27\n28\n\n\n29\n30\n1\n2\n3\n4\n5\n\n\n\n\nMon September 1: Labor day, no school\nWed September 3: First PTA general meeting / PTA tables / Vendors / Ice Cream social 🍦\nFriday Sept 12: first family night evening\nThursday Sept 25th: Pather Buck lunch\nFriday Sept 26th: Principal’s meeting & student recognition 🚀\nTBD: Scholastic book fair 📚"
+  },
+  {
+    "objectID": "master_calendar.html#october-2025",
+    "href": "master_calendar.html#october-2025",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "October 2025 🎃",
+    "text": "October 2025 🎃\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n29\n30\n1\n2\n3\n4\n5\n\n\n6\n7\n8\n9\n10\n11\n12\n\n\n13\n14\n15\n16\n17\n18\n19\n\n\n20\n21\n22\n23\n24\n25\n26\n\n\n27\n28\n29\n30\n31\n1\n2\n\n\n\n\nWed Oct 1: PTA executive board 🧐\nWed Oct 8: Donuts for grownups reading event 📚 🍩\nWed Oct 16: Restaurant fundraiser 🍲\nWed Oct 23: Panther buck lunch 🍔\nMonday Oct 20-24th: Red Ribbon Week\nFriday Oct 24th: Principal’s meeting & student recognition 🚀\nFriday Oct 31th: Halloween Parade at school 👻\nTBD: Hage Beautification Oct 17th?\nTBD: Hage Fall Festival October 24th? 🍂 🏴‍☠️ 🎃"
+  },
+  {
+    "objectID": "master_calendar.html#november-2025",
+    "href": "master_calendar.html#november-2025",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "November 2025 🦃",
+    "text": "November 2025 🦃\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n27\n28\n29\n30\n31\n1\n2\n\n\n3\n4\n5\n6\n7\n8\n9\n\n\n10\n11\n12\n13\n14\n15\n16\n\n\n17\n18\n19\n20\n21\n22\n23\n\n\n24\n25\n26\n27\n28\n29\n30\n\n\n\n\nWed Nov 5th: PTA executive board meeting 🧐\nMon Nov 10th: No school\nTuesday Nov 11th: No school\nMilitary appreciation breakfast - TBD 🇺🇸\nMonday Nov 17 - Friday Nov 21: Parent/teacher conferences 🏫\nThursday Nov 20th: Panther buck lunch 🍔\nThursday Nov 20th: Restaurant fundraiser 🍲\nFriday Nov 21: Principal’s meeting & Student Recognition 🚀\nMonday Nov 24th - Nov 28th: Thanksgiving break 🍁 🦃 🙏"
+  },
+  {
+    "objectID": "master_calendar.html#december-2025",
+    "href": "master_calendar.html#december-2025",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "December 2025 ⛄",
+    "text": "December 2025 ⛄\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n1\n2\n3\n4\n5\n6\n7\n\n\n8\n9\n10\n11\n12\n13\n14\n\n\n15\n16\n17\n18\n19\n20\n21\n\n\n22\n23\n24\n25\n26\n27\n28\n\n\n29\n30\n31\n1\n2\n3\n4\n\n\n\n\nWed Dec 3rd: Donuts for grownups reading event 📚 🍩\nWed Dec 10th: PTA Executive meeting holiday meeting at local restaurant ☃️\nWeek of Dec 15th: Dessert table for faculty & staff (appreciation) 🫶\nDecember 22nd - Jan2: Winter break 🥶\nTBD Holiday Gift Shop\nTBD Apex Fun Run meeting with Matt"
+  },
+  {
+    "objectID": "master_calendar.html#january-2025",
+    "href": "master_calendar.html#january-2025",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "January 2025 🗓️",
+    "text": "January 2025 🗓️\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n29\n30\n31\n1\n2\n3\n4\n\n\n5\n6\n7\n8\n9\n10\n11\n\n\n12\n13\n14\n15\n16\n17\n18\n\n\n19\n20\n21\n22\n23\n24\n25\n\n\n26\n27\n28\n29\n30\n31\n1\n\n\n\n\nTBD : District PTA meeting Old Town\nTBD: BizTown field trip for 4th & 5th grade\nWed January 7th or Wed 16th PTA General meeting with Family night\nThursday January 15th: Restaurant fundraiser\nJanuary 19th: MLK Jr Holiday\nTuesday January 20th: APEX Fun Run fundraising begins\nThursday Jan 22nd: Panther buck lunch\nThursday Jan 29th: APEX Fun Run 🏃‍♀️\nThursday Jan 29th: Chuck E Cheese fundraiser 🍕\nFriday Jan 30th: Student Recognition 🚀 and Principal’s meeting"
+  },
+  {
+    "objectID": "master_calendar.html#february-2026",
+    "href": "master_calendar.html#february-2026",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "February 2026 ❤️",
+    "text": "February 2026 ❤️\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n26\n27\n28\n29\n30\n31\n1\n\n\n2\n3\n4\n5\n6\n7\n8\n\n\n9\n10\n11\n12\n13\n14\n15\n\n\n16\n17\n18\n19\n20\n21\n22\n\n\n23\n24\n25\n26\n27\n28\n1\n\n\n\n\nHage Swim Program preparation\nWeek of Feb 2nd: Debrief with APEX\nWed Feb 4th: PTA executive meeting\nFriday Feb 13th: No school\nFriday Feb 16th: President’s day, no school\nThursday Feb 19th: Restaurant fundraiser\nThursday Feb 26th: Panther Buck Lunch\nFriday Feb 27th: Principal’s meeting & Student recognition"
+  },
+  {
+    "objectID": "master_calendar.html#march-2026",
+    "href": "master_calendar.html#march-2026",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "March 2026 ☘️",
+    "text": "March 2026 ☘️\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n23\n24\n25\n26\n27\n28\n1\n\n\n2\n3\n4\n5\n6\n7\n8\n\n\n9\n10\n11\n12\n13\n14\n15\n\n\n16\n17\n18\n19\n20\n21\n22\n\n\n23\n24\n25\n26\n27\n28\n29\n\n\n30\n31\n1\n2\n3\n4\n5\n\n\n\n\nSwim program begins 🏊‍♀️\nSlime Time with Mr. Lee\nScholastic Book Fair\nWeek of March 2nd: Read Across America Reading and Character event 📚\nFamily night Friday March 7th or March 14th\n\nFamily rave?\n\nWed March 4th or Wed March 20th: PTA general meeting\nThursday March 19th: Restaurant fundraiser\nWeek of March 23: Parent Teacher conferences\nThursday March 26th: Panther buck lunch\nFriday March 27th: Student Recognition & Principal’s meeting"
+  },
+  {
+    "objectID": "master_calendar.html#april-2026",
+    "href": "master_calendar.html#april-2026",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "April 2026 🌸",
+    "text": "April 2026 🌸\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n30\n31\n1\n2\n3\n4\n5\n\n\n6\n7\n8\n9\n10\n11\n12\n\n\n13\n14\n15\n16\n17\n18\n19\n\n\n20\n21\n22\n23\n24\n25\n26\n\n\n27\n28\n29\n30\n1\n2\n3\n\n\n\n\nHage Culture Fest TBD\nWed Apr 1: PTA executive meeting (no joke)\nThursday April 16th: Restaurant Fundraiser\nThursday April 23rd: Panther Buck lunch\nFriday April 24th: Principal’s meeting & student recognition 🚀"
+  },
+  {
+    "objectID": "master_calendar.html#may-2026",
+    "href": "master_calendar.html#may-2026",
+    "title": "Hage PTA Master Calendar 2025-26",
+    "section": "May 2026 👩‍🎓",
+    "text": "May 2026 👩‍🎓\n\n\n\nMon\nTue\nWed\nThu\nFri\nSat\nSun\n\n\n\n\n27\n28\n29\n30\n1\n2\n3\n\n\n4\n5\n6\n7\n8\n9\n10\n\n\n11\n12\n13\n14\n15\n16\n17\n\n\n18\n19\n20\n21\n22\n23\n24\n\n\n25\n26\n27\n28\n29\n30\n31\n\n\n\n\nWeek of May 4th: Teacher appreciation\nWed May 6th: PTA executive board meeting\nWed May 13th: Donuts for grownups reading event 📚\nThursday May 14th: Restaurant fundraiser\nThursday May 21st: Panther Buck lunch\nFriday May 22nd: Student recognition & Principal’s meeting\nFriday May 22nd: 5th grade Bridge to Beach :beach:\nWed May 27th: 5th grade Promotion 😭"
+  },
+  {
+    "objectID": "financials.html",
+    "href": "financials.html",
+    "title": "Hage PTA Financials",
+    "section": "",
+    "text": "I’m trying to make sense of financials ahead of budget planning meeting on June 3rd."
+  },
+  {
+    "objectID": "financials.html#introduction",
+    "href": "financials.html#introduction",
+    "title": "Hage PTA Financials",
+    "section": "",
+    "text": "I’m trying to make sense of financials ahead of budget planning meeting on June 3rd."
+  },
+  {
+    "objectID": "financials.html#ptez-deposits",
+    "href": "financials.html#ptez-deposits",
+    "title": "Hage PTA Financials",
+    "section": "PTEz Deposits",
+    "text": "PTEz Deposits\nI have PTEz login credentials and I parsed the deposit history for FY 2024-25. Any records prior to June 30, 2024 were not included. A record in the deposit history looks like this (this is an example, not a real entry):\n\n\n\n\n\n\n\n\n\n\n\nBank\nDate\nMemo\nChecks\nCash\nTotal\n\n\n\n\nBank of America\n8/01/2024\nGates Foundation\n0.00\n10000.00\n10000.00\n\n\n\nNot all data is reflected in the Deposit History. The last date at time of writing is April 30th.\nI grouped the deposits into categories. We can see the total deposits by category in the barplot and table below:\n\n\n\n\n\nPTEz Deposits by memo category\n\n\n\n\nTable: Total Amount by Category\n\n\n\nCategory\nTotal Amount\n\n\n\n\nBook Fair\n14,144.64\n\n\nHage Fall Festival\n7,879.19\n\n\nGrants\n7,666.52\n\n\nSquare\n7,152.58\n\n\n5th Grade Promotion\n5,030.00\n\n\nApex Fun Run\n4,774.50\n\n\nBoo Grams\n2,014.00\n\n\nRestaurant Fundraiser\n1,439.54\n\n\nSpirit Wear\n1,297.00\n\n\nMembership\n1,085.15\n\n\nFamily Nights\n1,063.00\n\n\nPopsicle Sales\n900.00\n\n\nArt to Remember\n787.57\n\n\nFundraisers\n372.99\n\n\nSwap Meet\n270.00\n\n\nFundraiser\n208.06\n\n\nBiz Town\n127.00\n\n\nHoliday Shop\n56.00\n\n\n\n\nBook Fairs\nTable: Book Fair Individual Deposits\n\n\n\n\n\n\n\n\n\n\n\nDate\nMemo\nChecks\nCash\nTotal\nCategory\n\n\n\n\n10/11/2024\nScholastic Book Fair\n0.00\n6284.35\n6284.35\nBook Fair\n\n\n11/01/2024\nScholastic Book Fair\n0.00\n750.00\n750.00\nBook Fair\n\n\n11/01/2024\nScholastic Book Fair\n0.00\n750.00\n750.00\nBook Fair\n\n\n04/09/2025\nSpring Scholastic Book Fair\n0.00\n6360.29\n6360.29\nBook Fair\n\n\n\nThere were two entries in the PTEz deposit history for 750.00 dollars. It’s unclear to me if these are duplicates. I will have to cross check with treasurer report.\n\n\nSquare\nThe Square deposits lack any meaningful granularity. These numbers include Pather Partnership money and transactions from concession stands, among other things.\nTable: Square Individual Deposits\n\n\n\nDate\nMemo\nChecks\nCash\nTotal\nCategory\n\n\n\n\n8/22/2024\nSquare Deposit\n0.00\n19.12\n19.12\nSquare\n\n\n8/23/2024\nSquare Deposit\n0.00\n86.49\n86.49\nSquare\n\n\n8/26/2024\nSquare Deposit\n0.00\n90.67\n90.67\nSquare\n\n\n8/26/2024\nSquare Deposit\n0.00\n52.80\n52.80\nSquare\n\n\n8/26/2024\nSquare Deposit\n0.00\n19.12\n19.12\nSquare\n\n\n8/27/2024\nSquare Deposit\n0.00\n87.46\n87.46\nSquare\n\n\n8/27/2024\nSquare Deposit\n0.00\n95.22\n95.22\nSquare\n\n\n8/29/2024\nSquare Deposit\n0.00\n19.12\n19.12\nSquare\n\n\n8/30/2024\nSquare Deposit\n0.00\n52.50\n52.50\nSquare\n\n\n9/2/2024\nSquare Deposit\n0.00\n38.54\n38.54\nSquare\n\n\n11/22/2024\nSquare Transfer\n0.00\n6591.54\n6591.54\nSquare\n\n\n\n\n\n5th Grade Promotion\nThese were the individual deposits make for 5th grade promotion. Similar to Square, there is not much granularity on what specific events or activities generated these deposits.\nTable: 5th Grade Promotion Individual Deposits\n\n\n\n\n\n\n\n\n\n\n\nDate\nMemo\nChecks\nCash\nTotal\nCategory\n\n\n\n\n9/3/2024\n5th Grade Promotion\n1800.00\n0.00\n1800.00\n5th Grade Promotion\n\n\n1/15/2025\n5th Grade Promotion\n0.00\n1000.00\n1000.00\n5th Grade Promotion\n\n\n02/04/2025\n5th Grade Promotion\n30.00\n0.00\n30.00\n5th Grade Promotion\n\n\n3/3/2025\n5th Grade Promotion\n0.00\n1000.00\n1000.00\n5th Grade Promotion\n\n\n3/3/2025\n5th Grade Promotion\n0.00\n200.00\n200.00\n5th Grade Promotion\n\n\n04/30/2025\n5th Grade Promotion\n0.00\n1000.00\n1000.00\n5th Grade Promotion\n\n\n\n\n\nFundraisers & Restaurant Fundraisers\nTable: Fundraisers Individual Deposits\n\n\n\n\n\n\n\n\n\n\n\nDate\nMemo\nChecks\nCash\nTotal\nCategory\n\n\n\n\n02/04/2025\nRegal Movie Fundraiser\n372.99\n0.00\n372.99\nFundraisers\n\n\n02/21/2025\nSee’s Candy Fundraiser\n0.00\n208.06\n208.06\nFundraisers\n\n\n\nTable: Restaurant Fundraisers Individual Deposits\n\n\n\n\n\n\n\n\n\n\n\nDate\nMemo\nChecks\nCash\nTotal\nCategory\n\n\n\n\n02/21/2025\nPick up Stix Restaurant Fundraiser\n315.86\n0.00\n315.86\nRestaurant Fundraiser\n\n\n04/30/2025\nIsland’s Restaurant Fundraiser\n208.92\n0.00\n208.92\nRestaurant Fundraiser\n\n\n04/09/2025\nJungle Tea Restaurant Fundraiser\n200.00\n0.00\n200.00\nRestaurant Fundraiser\n\n\n1/17/2025\nChick-fil-A Fundraiser\n0.00\n165.79\n165.79\nRestaurant Fundraiser\n\n\n11/01/2024\nFirehouse Restaurant Fundraiser\n0.00\n153.37\n153.37\nRestaurant Fundraiser\n\n\n04/09/2025\nOn the Border Restaurant Fundraiser\n152.00\n0.00\n152.00\nRestaurant Fundraiser\n\n\n11/27/2024\nSammy’s Wood Fired Pizza\n92.90\n32.00\n124.90\nRestaurant Fundraiser\n\n\n1/17/2025\nJamba Juice\n118.70\n0.00\n118.70\nRestaurant Fundraiser\n\n\n\n\n\nGrants\nTable: Grants Individual Deposits\n\n\n\n\n\n\n\n\n\n\n\nDate\nMemo\nChecks\nCash\nTotal\nCategory\n\n\n\n\n02/21/2025\nLeighton Foundation\n7500.00\n0.00\n7500.00\nGrants\n\n\n04/30/2025\nStartbucks Donation\n0.00\n166.52\n166.52\nGrants\n\n\n\nI am unclear what the Leighton Foundation grant was for and who submitted it. I would like to get clarity by when it needs to be resubmitted for next fiscal year."
+  },
+  {
+    "objectID": "financials.html#next-steps",
+    "href": "financials.html#next-steps",
+    "title": "Hage PTA Financials",
+    "section": "Next steps",
+    "text": "Next steps\nCompare these deposits to the latest Treasuer reports."
   }
 ]
