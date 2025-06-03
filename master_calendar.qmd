@@ -14,7 +14,7 @@ jupyter: python3
 
 ## Master Calendar of events 
 
-Master calendar of events for 2025-26 school year. This is a draft document. 
+Master calendar of events for 2025-26 school year. This is a draft document. Dates and events will be finalized and added to PTA google calendar. 
 
 [District calendar for 2025-26](https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_27732394/File/Academics/Academic%20Calendars/Traditional/Final%202025-26%20Academic%20Calendar%202025-26.pdf)
 
